@@ -5,10 +5,20 @@ import java.util.List;
 
 public class Shop {
 
+    private static Shop instance;
     private HashMap<Product, Integer> warehouse;
 
-    public Shop() {
+    private Shop() {
         this.warehouse = new HashMap<>();
+    }
+
+    public static Shop getInstance() {
+        if (Shop.instance != null) {
+            return Shop.instance;
+        } else {
+            Shop.instance = new Shop();
+            return Shop.instance;
+        }
     }
 
     public HashMap<Product, Integer> getWarehouse() {
@@ -39,6 +49,21 @@ public class Shop {
             } else {
                 warehouse.put(product, quantity);
             }
+        }
+    }
+
+    public void delete(Product product, int quantity) throws Exception {
+        Integer quantityOld = warehouse.get(product);
+
+        if (quantityOld < quantity) {
+            throw new Exception("Error store does not have enough items");
+        }
+
+        int quantityNew = quantityOld - quantity;
+        warehouse.put(product, quantityNew);
+
+        if (quantityNew < 1) {
+            warehouse.remove(product);
         }
     }
 }

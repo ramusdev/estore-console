@@ -3,22 +3,12 @@ package com.rb.model;
 import java.util.Objects;
 
 public class Milk extends Product {
-    float volume = 1f;
-    float weight = 1.2f;
-    String expirationDate = "20.12.2021";
-    private long id;
+    private float volume;
+    private float weight;
+    private String expirationDate;
 
     public Milk(String name, long id) {
-        super(name);
-        this.id = id;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+        super(name, id);
     }
 
     public float getVolume() {
@@ -48,7 +38,7 @@ public class Milk extends Product {
     @Override
     public String toString() {
         return "Milk{" +
-                "id=" + id +
+                "id=" + super.getId() +
                 ", volume=" + volume +
                 ", weight=" + weight +
                 ", expirationDate='" + expirationDate + '\'' +
@@ -60,11 +50,11 @@ public class Milk extends Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Milk milk = (Milk) o;
-        return Float.compare(milk.volume, volume) == 0 && Float.compare(milk.weight, weight) == 0 && id == milk.id && Objects.equals(expirationDate, milk.expirationDate);
+        return Float.compare(milk.volume, volume) == 0 && Float.compare(milk.weight, weight) == 0 && super.getId() == milk.getId() && Objects.equals(expirationDate, milk.expirationDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(super.getId());
     }
 }

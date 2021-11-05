@@ -3,21 +3,11 @@ package com.rb.model;
 import java.util.Objects;
 
 public class Bread extends Product {
-    private float weight = 0.4f;
-    private String expirationDate = "19.12.2021";
-    private long id;
+    private float weight;
+    private String expirationDate;
 
     public Bread(String name, long id) {
-        super(name);
-        this.id = id;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+        super(name, id);
     }
 
     public float getWeight() {
@@ -39,7 +29,7 @@ public class Bread extends Product {
     @Override
     public String toString() {
         return "Bread{" +
-                "id=" + id +
+                "id=" + super.getId() +
                 ", weight=" + weight +
                 ", expirationDate='" + expirationDate + '\'' +
                 '}';
@@ -50,11 +40,11 @@ public class Bread extends Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bread bread = (Bread) o;
-        return Float.compare(bread.weight, weight) == 0 && id == bread.id && Objects.equals(expirationDate, bread.expirationDate);
+        return Float.compare(bread.weight, weight) == 0 && super.getId() == bread.getId() && Objects.equals(expirationDate, bread.expirationDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(super.getId());
     }
 }

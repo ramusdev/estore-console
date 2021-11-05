@@ -15,14 +15,14 @@ public class ProductAllView {
     public void show() {
         HashMap<Product, Integer> cart = shoppingCart.getCart();
 
-        System.out.println(cart.size());
+        // System.out.println(cart.size());
 
         System.out.println("|------------- My Cart ---------------|");
+        System.out.println("| product              id    quantity |");
+        System.out.println("|                                     |");
         for (Product product : cart.keySet()) {
             int quantity = cart.get(product);
-            // String productString = "| " + product.getName() + " ----------|";
-            System.out.format("| %-32s %-3d|\n", product.getName(), quantity);
-            // System.out.println(productString);
+            System.out.format("| %-20s %-9d %-5d|\n", product.getName(), product.getId(), quantity);
         }
         System.out.println("|-------------------------------------|");
 

@@ -1,22 +1,25 @@
 package com.rb.controllers;
 
-import com.rb.model.Bread;
-import com.rb.model.Milk;
-import com.rb.model.Product;
-import com.rb.model.ShoppingCart;
+import com.rb.model.*;
 import com.rb.view.ProductAllView;
 
 import java.util.concurrent.ExecutionException;
 
 public class ShoppingCartController {
     private ShoppingCart shoppingCart;
+    private Shop shop;
 
-    public ShoppingCartController(ShoppingCart shoppingCart) {
+    public ShoppingCartController(ShoppingCart shoppingCart, Shop shop) {
         this.shoppingCart = shoppingCart;
+        this.shop = shop;
     }
 
     public void addProductToCart(Product product, int quantity) {
-        shoppingCart.add(product, quantity);
+        try {
+            shop.delete(product, quantity);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void deleteProduct(Product product, int quantity) {
@@ -30,5 +33,9 @@ public class ShoppingCartController {
     public void printShoppingCart(ShoppingCart shoppingCart) {
         ProductAllView productAllView = new ProductAllView(shoppingCart);
         productAllView.show();
+    }
+
+    public void addProduct(Product product) {
+        // shop.transferProductToCart(product);
     }
 }
