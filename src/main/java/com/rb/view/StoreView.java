@@ -1,28 +1,30 @@
 package com.rb.view;
 
 import com.rb.model.Product;
+import com.rb.model.ProductWrapper;
 import com.rb.model.Shop;
 import com.rb.model.ShoppingCart;
 
 import java.util.HashMap;
+import java.util.List;
 
-public class ShopView {
-    private Shop shop;
+public class StoreView {
+    private List<ProductWrapper> products;
 
-    public ShopView(Shop shop) {
-        this.shop = shop;
+    public StoreView(List<ProductWrapper> products) {
+        this.products = products;
     }
 
     public void show() {
-        HashMap<Product, Integer> cart = shop.getWarehouse();
-
-        // System.out.println(cart.size());
+        // System.out.println(products.size());
 
         System.out.println("|-------------- Shop -----------------|");
         System.out.println("| product              id    quantity |");
         System.out.println("|                                     |");
-        for (Product product : cart.keySet()) {
-            int quantity = cart.get(product);
+        for (ProductWrapper productWrapper : products) {
+            Product product = productWrapper.getProduct();
+            int quantity = productWrapper.getQuantity();
+
             System.out.format("| %-20s %-9d %-5d|\n", product.getName(), product.getId(), quantity);
         }
         System.out.println("|-------------------------------------|\n");

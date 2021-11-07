@@ -1,50 +1,33 @@
 package com.rb;
 
-import com.rb.controllers.ShoppingCartController;
-import com.rb.model.*;
-import com.rb.view.ShopView;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.rb.controllers.CartController;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Bread bread = new Bread("Bread", 2000);
-        Bread breadSecond = new Bread("Bread", 2000);
-        Bread breadBlack = new Bread("Bread black", 2001);
-        Milk milkWhite = new Milk("Milk white", 1021);
-        Milk milkBlack = new Milk("Milk black", 1022);
+        /*
+        String login = "User";
+        String password = "Password";
+        AuthenticationController authenticationController = new AuthenticationController();
+        authenticationController.register(login, password);
+        System.out.println(authenticationController.login("User", password));
+        */
 
-        // Init shop
-        List<ProductWrapper> productWrapperList = new ArrayList<>();
-        productWrapperList.add(new ProductWrapper(bread, 1));
+        /*
+        Bread breadWhite = new Bread("Bread white", 1000);
+        Bread breadBlack = new Bread("Bread black", 1001);
+        StoreController storeController = new StoreController();
+        storeController.addProduct(breadWhite, 1);
+        storeController.addProduct(breadBlack, 2);
+        storeController.showStore();
+        */
 
-        List<ProductWrapper> productWrapperListSecond = new ArrayList<>();
-        productWrapperList.add(new ProductWrapper(milkWhite, 50));
+        long breadWhite = 1000;
+        CartController cartController = new CartController();
+        cartController.addProduct(productId);
+        cartController.showCart();
 
-        Shop shop = Shop.getInstance();
-        shop.addProducts(productWrapperList);
-        // shop.addProducts(productWrapperListSecond);
-        // shop.addProduct(milkWhite, 1);
-
-        Shop shop2 = Shop.getInstance();
-        shop2.addProducts(productWrapperListSecond);
-
-        ShopView shopView = new ShopView(shop);
-        shopView.show();
-
-        ShoppingCart shoppingCart = new ShoppingCart();
-        ShoppingCartController shoppingCartController = new ShoppingCartController(shoppingCart, shop);
-        shoppingCartController.addProductToCart(breadSecond, 1);
-
-        shopView.show();
-
-
-        // shoppingCartController.addProductToCart(bread, 5);
-        // shoppingCartController.addProductToCart(milkWhite, 1021);
-        // shoppingCartController.printShoppingCart(shoppingCart);
     }
 
 }

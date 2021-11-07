@@ -5,11 +5,11 @@ import com.rb.view.ProductAllView;
 
 import java.util.concurrent.ExecutionException;
 
-public class ShoppingCartController {
+public class CartController {
     private ShoppingCart shoppingCart;
     private Shop shop;
 
-    public ShoppingCartController(ShoppingCart shoppingCart, Shop shop) {
+    public CartController(ShoppingCart shoppingCart, Shop shop) {
         this.shoppingCart = shoppingCart;
         this.shop = shop;
     }
