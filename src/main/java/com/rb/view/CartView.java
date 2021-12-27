@@ -6,17 +6,19 @@ import com.rb.model.ProductWrapper;
 
 import java.util.List;
 
-public class StoreView {
+public class CartView {
     private List<ProductWrapper> products;
+    private double totalPrice;
 
-    public StoreView(List<ProductWrapper> products) {
+    public CartView(List<ProductWrapper> products, double totalPrice) {
         this.products = products;
+        this.totalPrice = totalPrice;
     }
 
     public void show() {
         // System.out.println(products.size());
 
-        System.out.println("|------------------ Shop ---------------------|");
+        System.out.println("|------------------ Cart ---------------------|");
         System.out.println("| product              id    quantity   price |");
         System.out.println("|                                             |");
         for (ProductWrapper productWrapper : products) {
@@ -29,6 +31,8 @@ public class StoreView {
                     quantity,
                     product.getPrice());
         }
+        System.out.println("|                                             |");
+        System.out.format("| Total price                           %.2f |\n", totalPrice);
         System.out.println("|---------------------------------------------|\n");
     }
 }

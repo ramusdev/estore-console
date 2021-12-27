@@ -1,6 +1,7 @@
 package com.rb.controllers;
 
 import com.rb.database.Database;
+import com.rb.exceptions.NoProductFoundException;
 import com.rb.model.Bread;
 import com.rb.model.Product;
 import com.rb.model.ProductWrapper;
@@ -12,9 +13,9 @@ import java.util.List;
 
 public class StoreController {
     public void fillStore() {
-        Bread breadWhite = new Bread("Bread white", 1000);
-        Bread breadBlack = new Bread("Bread black", 1001);
-        Bread milk = new Bread("Milk white", 2000);
+        Bread breadWhite = new Bread("Bread white", 1000, 5.1);
+        Bread breadBlack = new Bread("Bread black", 1001, 6);
+        Bread milk = new Bread("Milk white", 2000, 11.2);
 
         Database database = Database.getInstance();
         // System.out.println("show fill store link");
@@ -42,8 +43,17 @@ public class StoreController {
     }
 
     public void addProduct(Product product, int quantity) {
+
+        ProductWrapper productWrapper = null;
         Database database = Database.getInstance();
-        ProductWrapper productWrapper = database.getProduct(product.getId());
+
+        // try {
+            productWrapper = database.getProduct(product.getId());
+        // } catch (NoProductFoundException e) {
+            // System.out.println(e.getMessage());
+        // }
+
+        // System.out.println("After catch");
 
         if (productWrapper != null) {
             int quantityOld = productWrapper.getQuantity();

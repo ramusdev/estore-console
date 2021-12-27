@@ -2,12 +2,13 @@ package com.rb.model;
 
 public class Product {
     private String name;
-    private float price;
+    private double price;
     private long id;
 
-    public Product(String name, long id) {
+    public Product(String name, long id, double price) {
         this.name = name;
         this.id = id;
+        this.price = price;
     }
 
     public String getName() {
@@ -18,7 +19,7 @@ public class Product {
         this.name = name;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 

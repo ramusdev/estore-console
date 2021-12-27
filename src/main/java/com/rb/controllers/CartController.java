@@ -1,41 +1,33 @@
 package com.rb.controllers;
 
+import com.rb.database.Database;
+import com.rb.exceptions.NoProductFoundException;
 import com.rb.model.*;
-import com.rb.view.ProductAllView;
+import com.rb.view.CartView;
 
-import java.util.concurrent.ExecutionException;
+import java.util.List;
 
 public class CartController {
-    private ShoppingCart shoppingCart;
-    private Shop shop;
+    private Cart cart;
 
-    public CartController(ShoppingCart shoppingCart, Shop shop) {
-        this.shoppingCart = shoppingCart;
-        this.shop = shop;
+    public CartController(Cart cart) {
+        this.cart = cart;
     }
 
-    public void addProductToCart(Product product, int quantity) {
-        try {
-            shop.delete(product, quantity);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+    public void addProduct(long id, int quantity) {
+        Database database = Database.getInstance();
+
+        ProductWrapper productWrapper = database.getProduct(id);
+        Product product = productWrapper.getProduct();
+
+        cart.addProduct(product, quantity);
     }
 
-    public void deleteProduct(Product product, int quantity) {
-        try {
-            shoppingCart.delete(product, quantity);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
+    public void showCart() {
+        List<ProductWrapper> productWrappers = cart.getProducts();
+        double totalPrice = cart.getTotalPrice();
 
-    public void printShoppingCart(ShoppingCart shoppingCart) {
-        ProductAllView productAllView = new ProductAllView(shoppingCart);
-        productAllView.show();
-    }
-
-    public void addProduct(Product product) {
-        // shop.transferProductToCart(product);
+        CartView cartView = new CartView(productWrappers, totalPrice);
+        cartView.show();
     }
 }

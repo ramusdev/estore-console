@@ -1,5 +1,7 @@
 package com.rb.model;
 
+import com.rb.exceptions.NoProductFoundException;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,7 +42,9 @@ public class Shop {
 
     public void addProducts(List<ProductWrapper> productWrapperList) {
         for (ProductWrapper productWrapper : productWrapperList) {
+
             Product product = productWrapper.getProduct();
+
             Integer quantity = productWrapper.getQuantity();
 
             if (warehouse.containsKey(product)) {

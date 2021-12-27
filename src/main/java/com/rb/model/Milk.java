@@ -7,8 +7,8 @@ public class Milk extends Product {
     private float weight;
     private String expirationDate;
 
-    public Milk(String name, long id) {
-        super(name, id);
+    public Milk(String name, long id, double price) {
+        super(name, id, price);
     }
 
     public float getVolume() {

@@ -1,5 +1,6 @@
 package com.rb.database;
 
+import com.rb.exceptions.NoProductFoundException;
 import com.rb.model.Product;
 import com.rb.model.ProductWrapper;
 import com.rb.model.User;
@@ -31,6 +32,14 @@ public class Database {
     }
 
     public ProductWrapper getProduct(long id) {
+
+        // System.out.println("From get product");
+        // System.out.println(products.get(id));
+
+        // if (products.get(id) == null) {
+            // throw new NoProductFoundException("Error product found exception");
+        // }
+
         return products.get(id);
     }
 

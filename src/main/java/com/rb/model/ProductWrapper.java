@@ -1,5 +1,7 @@
 package com.rb.model;
 
+import com.rb.exceptions.NoProductFoundException;
+
 public class ProductWrapper {
     private Product product;
     private int quantity;
@@ -10,6 +12,11 @@ public class ProductWrapper {
     }
 
     public Product getProduct() {
+        // if (product == null) {
+            // throw new NoProductFoundException("Error no product inside wrapper");
+        // }
+
+        // System.out.println("This throws inside product wrappper");
         return product;
     }
 

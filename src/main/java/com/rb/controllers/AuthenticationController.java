@@ -2,6 +2,7 @@ package com.rb.controllers;
 
 import com.rb.database.Database;
 import com.rb.model.User;
+import com.rb.view.AuthentificationView;
 import org.apache.commons.codec.digest.DigestUtils;
 
 public class AuthenticationController {
@@ -27,5 +28,10 @@ public class AuthenticationController {
 
         User user = new User(login, DigestUtils.md5Hex(password));
         database.insertUser(user);
+    }
+
+    public boolean show() {
+        AuthentificationView authentificationView = new AuthentificationView(this);
+        return authentificationView.show();
     }
 }

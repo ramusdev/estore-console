@@ -6,8 +6,8 @@ public class Bread extends Product {
     private float weight;
     private String expirationDate;
 
-    public Bread(String name, long id) {
-        super(name, id);
+    public Bread(String name, long id, double price) {
+        super(name, id, price);
     }
 
     public float getWeight() {
