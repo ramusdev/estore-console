@@ -1,2 +1,2 @@
-# estore
-Java estore lab
+# Estore
+Estore console lab 1
