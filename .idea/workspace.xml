@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9189ff0f-8046-4197-8691-fca77893ccb9" name="Default Changelist" comment="" />
+    <list default="true" id="9189ff0f-8046-4197-8691-fca77893ccb9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rb/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rb/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rb/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rb/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rb/view/AuthentificationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rb/view/AuthentificationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rb/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rb/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/rb/view/AuthentificationView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/rb/view/AuthentificationView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab1/out/production/romanbieliev_lab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab1/out/production/romanbieliev_lab1/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab1/out/production/romanbieliev_lab1/com/company/findDivisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab1/out/production/romanbieliev_lab1/com/company/findDivisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab6/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Array.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab6/out/production/romanbieliev_lab6/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/romanbieliev_lab6.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab6/romanbieliev_lab6.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/src/com/company/Array.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../labs/romanbieliev_lab6/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../labs/romanbieliev_lab6/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linked_list/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../linked_list/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,8 +53,13 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="20ETXYaObkriGEWhsS1BbpGYTwb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,7 +77,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1321004" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -59,13 +88,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rb.App" />
-      <module name="estore" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -75,6 +97,13 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rb.App" />
+      <module name="estoreconsole" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,6 +145,9 @@
       <workItem from="1636321612206" duration="5080000" />
       <workItem from="1636389173751" duration="10369000" />
       <workItem from="1636466921239" duration="12402000" />
+      <workItem from="1641139087053" duration="240000" />
+      <workItem from="1641218348567" duration="3623000" />
+      <workItem from="1641226695067" duration="3883000" />
     </task>
     <servers />
   </component>

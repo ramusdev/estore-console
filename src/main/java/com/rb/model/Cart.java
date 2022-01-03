@@ -9,7 +9,16 @@ public class Cart {
     private HashMap<Long, ProductWrapper> cart = new HashMap<>();
 
     public void addProduct(Product product, int quantity) {
-        cart.put(product.getId(), new ProductWrapper(product, quantity));
+        if (cart.containsKey(product.getId())) {
+            ProductWrapper productWrapper = cart.get(product.getId());
+
+            int quantityOld = productWrapper.getQuantity();
+            int quantityNew = quantityOld + quantity;
+
+            cart.put(product.getId(), new ProductWrapper(product, quantityNew));
+        } else {
+            cart.put(product.getId(), new ProductWrapper(product, quantity));
+        }
     }
 
     public List<ProductWrapper> getProducts() {
