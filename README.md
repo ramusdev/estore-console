@@ -1,2 +1,3 @@
 # Estore console
-Estore console lab 1
+Estore console version
+Youtube: https://www.youtube.com/watch?v=bOCVYyfRkSM
